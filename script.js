@@ -1,3 +1,43 @@
+// 다국어 지원
+let currentLang = localStorage.getItem('language') || 'ko';
+
+function changeLanguage(lang, event) {
+    currentLang = lang;
+    localStorage.setItem('language', lang);
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+
+    // 모든 data-i18n 속성을 가진 요소 번역
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+
+    // 언어 버튼 활성화 상태 변경
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    if (event && event.target) {
+        event.target.classList.add('active');
+    }
+}
+
+// 페이지 로드 시 저장된 언어 적용
+document.addEventListener('DOMContentLoaded', () => {
+    if (currentLang !== 'ko') {
+        const langBtn = document.querySelector(`.lang-btn[onclick="changeLanguage('${currentLang}')"]`);
+        if (langBtn) {
+            langBtn.click();
+        }
+    }
+});
+
 // 네비게이션 스크롤 효과
 const navbar = document.getElementById('navbar');
 const scrollTop = document.getElementById('scrollTop');

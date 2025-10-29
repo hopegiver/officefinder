@@ -6,21 +6,26 @@
     <title>오피스파인더 - 투명한 사무실 임대 플랫폼</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-lang="ko">
     <!-- 네비게이션 -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-content">
                 <div class="logo">오피스파인더</div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#hero" class="nav-link">홈</a></li>
-                    <li><a href="#problem" class="nav-link">문제정의</a></li>
-                    <li><a href="#solution" class="nav-link">해결방법</a></li>
-                    <li><a href="#features" class="nav-link">주요기능</a></li>
-                    <li><a href="#differentiation" class="nav-link">차별화</a></li>
-                    <li><a href="#roadmap" class="nav-link">로드맵</a></li>
-                    <li><a href="#contact" class="nav-link">문의</a></li>
+                    <li><a href="#hero" class="nav-link" data-i18n="nav_home">홈</a></li>
+                    <li><a href="#problem" class="nav-link" data-i18n="nav_problem">문제정의</a></li>
+                    <li><a href="#solution" class="nav-link" data-i18n="nav_solution">해결방법</a></li>
+                    <li><a href="#features" class="nav-link" data-i18n="nav_features">주요기능</a></li>
+                    <li><a href="#differentiation" class="nav-link" data-i18n="nav_differentiation">차별화</a></li>
+                    <li><a href="#roadmap" class="nav-link" data-i18n="nav_roadmap">로드맵</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">문의</a></li>
                 </ul>
+                <div class="language-selector">
+                    <button class="lang-btn active" onclick="changeLanguage('ko', event)">한국어</button>
+                    <button class="lang-btn" onclick="changeLanguage('uz', event)">O'zbek</button>
+                    <button class="lang-btn" onclick="changeLanguage('ru', event)">Русский</button>
+                </div>
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
@@ -34,11 +39,11 @@
     <section id="hero" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title fade-in">투명한 사무실 임대의 시작</h1>
-                <p class="hero-subtitle fade-in">실시간 공실 정보와 입주자 리뷰로 완벽한 사무실을 찾으세요</p>
+                <h1 class="hero-title fade-in" data-i18n="hero_title">투명한 사무실 임대의 시작</h1>
+                <p class="hero-subtitle fade-in" data-i18n="hero_subtitle">실시간 공실 정보와 입주자 리뷰로 완벽한 사무실을 찾으세요</p>
                 <div class="hero-buttons fade-in">
-                    <button class="btn btn-primary" onclick="scrollToSection('features')">자세히 보기</button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">문의하기</button>
+                    <button class="btn btn-primary" onclick="scrollToSection('features')" data-i18n="hero_btn_detail">자세히 보기</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')" data-i18n="hero_btn_contact">문의하기</button>
                 </div>
             </div>
         </div>
@@ -457,6 +462,7 @@
     <!-- 맨 위로 버튼 -->
     <button class="scroll-top" id="scrollTop">↑</button>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
