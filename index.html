@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오피스파인더 - 투명한 사무실 임대 플랫폼</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">오피스파인더</div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link">홈</a></li>
+                    <li><a href="#problem" class="nav-link">문제정의</a></li>
+                    <li><a href="#solution" class="nav-link">해결방법</a></li>
+                    <li><a href="#features" class="nav-link">주요기능</a></li>
+                    <li><a href="#differentiation" class="nav-link">차별화</a></li>
+                    <li><a href="#roadmap" class="nav-link">로드맵</a></li>
+                    <li><a href="#contact" class="nav-link">문의</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">투명한 사무실 임대의 시작</h1>
+                <p class="hero-subtitle fade-in">실시간 공실 정보와 입주자 리뷰로 완벽한 사무실을 찾으세요</p>
+                <div class="hero-buttons fade-in">
+                    <button class="btn btn-primary" onclick="scrollToSection('features')">자세히 보기</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">문의하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="hero-illustration">
+            <div class="floating-card card-1"></div>
+            <div class="floating-card card-2"></div>
+            <div class="floating-card card-3"></div>
+        </div>
+    </section>
+
+    <!-- 문제 정의 섹션 -->
+    <section id="problem" class="problem section">
+        <div class="container">
+            <h2 class="section-title">현재 사무실 임대 시장의 문제</h2>
+            <div class="problem-grid">
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">📭</div>
+                    <h3>공실 정보 부재</h3>
+                    <p>실시간 공실 정보를 찾기 어렵고 중개사를 통해서만 확인 가능</p>
+                </div>
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">💰</div>
+                    <h3>임대 조건 비교 어려움</h3>
+                    <p>건물마다 다른 조건들을 일일이 비교하기 힘든 구조</p>
+                </div>
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">🏢</div>
+                    <h3>건물 관리 품질 차이</h3>
+                    <p>실제 입주 전까지 관리 상태와 환경을 알기 어려움</p>
+                </div>
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">😞</div>
+                    <h3>계약 후 불만족</h3>
+                    <p>예상과 다른 시설, 관리로 인한 후회 발생</p>
+                </div>
+                <div class="problem-card animate-on-scroll">
+                    <div class="problem-icon">💸</div>
+                    <h3>중개 의존 비용 증가</h3>
+                    <p>정보 부족으로 중개사에 의존하며 추가 비용 발생</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 해결 방법 섹션 -->
+    <section id="solution" class="solution section">
+        <div class="container">
+            <h2 class="section-title">오피스파인더의 해결 방법</h2>
+            <div class="solution-content">
+                <div class="solution-item animate-on-scroll">
+                    <div class="solution-number">01</div>
+                    <h3>실시간 사무실 데이터 수집</h3>
+                    <p>공실, 임대료, 시설 정보를 실시간으로 업데이트</p>
+                </div>
+                <div class="solution-item animate-on-scroll">
+                    <div class="solution-number">02</div>
+                    <h3>위치 기반 탐색과 비교</h3>
+                    <p>지도 기반으로 원하는 지역의 사무실을 한눈에 비교</p>
+                </div>
+                <div class="solution-item animate-on-scroll">
+                    <div class="solution-number">03</div>
+                    <h3>입주자 리뷰 제공</h3>
+                    <p>실제 입주 경험을 바탕으로 한 솔직한 후기 공유</p>
+                </div>
+                <div class="solution-item animate-on-scroll">
+                    <div class="solution-number">04</div>
+                    <h3>건물 시설 점수 자동 산정</h3>
+                    <p>객관적인 데이터 기반 평가 시스템으로 신뢰성 확보</p>
+                </div>
+                <div class="solution-item animate-on-scroll">
+                    <div class="solution-number">05</div>
+                    <h3>익명 문의 및 계약 지원</h3>
+                    <p>부담 없이 문의하고 계약까지 원스톱 지원</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 주요 기능 섹션 -->
+    <section id="features" class="features section">
+        <div class="container">
+            <h2 class="section-title">주요 기능</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🔍</div>
+                    <h3>스마트 검색 및 필터</h3>
+                    <p>위치, 가격, 면적, 시설 등 다양한 조건으로 맞춤 검색</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">📊</div>
+                    <h3>공실 현황</h3>
+                    <p>실시간으로 업데이트되는 정확한 공실 정보 제공</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">💹</div>
+                    <h3>임대료 시세 분석</h3>
+                    <p>지역별, 건물별 임대료 시세 데이터 비교 분석</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">⭐</div>
+                    <h3>입주사 리뷰</h3>
+                    <p>실제 입주 기업의 솔직한 후기와 평가</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">📸</div>
+                    <h3>사진 및 시설 체크리스트</h3>
+                    <p>상세한 사진과 시설 점검 리스트로 정확한 정보 제공</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>지도 기반 인근 정보</h3>
+                    <p>교통, 편의시설, 주차 등 주변 환경 정보 통합 제공</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">💬</div>
+                    <h3>문의 자동화</h3>
+                    <p>간편한 문의 시스템과 빠른 응답 관리</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🤝</div>
+                    <h3>커뮤니티 Q&A</h3>
+                    <p>입주자 간 질문과 답변으로 생생한 정보 교환</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 차별화 요소 섹션 -->
+    <section id="differentiation" class="differentiation section">
+        <div class="container">
+            <h2 class="section-title">차별화 요소</h2>
+            <div class="diff-container">
+                <div class="diff-card animate-on-scroll">
+                    <div class="diff-header">
+                        <span class="diff-badge">핵심 1</span>
+                        <h3>후기 중심 검증 구조</h3>
+                    </div>
+                    <p>실제 입주자의 경험을 바탕으로 한 신뢰할 수 있는 정보</p>
+                </div>
+                <div class="diff-card animate-on-scroll">
+                    <div class="diff-header">
+                        <span class="diff-badge">핵심 2</span>
+                        <h3>사무실 환경 스코어링</h3>
+                    </div>
+                    <p>시설, 관리, 보안 등을 종합적으로 평가한 객관적 점수</p>
+                </div>
+                <div class="diff-card animate-on-scroll">
+                    <div class="diff-header">
+                        <span class="diff-badge">핵심 3</span>
+                        <h3>입지 경쟁력 지수</h3>
+                    </div>
+                    <p>교통, 편의성, 비즈니스 환경을 종합한 입지 분석</p>
+                </div>
+                <div class="diff-card animate-on-scroll">
+                    <div class="diff-header">
+                        <span class="diff-badge">핵심 4</span>
+                        <h3>관리 및 보안 품질 데이터</h3>
+                    </div>
+                    <p>건물 관리 이력과 보안 시스템 정보 투명 공개</p>
+                </div>
+                <div class="diff-card animate-on-scroll">
+                    <div class="diff-header">
+                        <span class="diff-badge">핵심 5</span>
+                        <h3>커뮤니티 기반 Q&A</h3>
+                    </div>
+                    <p>입주자 간 활발한 정보 교류로 생생한 인사이트 제공</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 고객 세그먼트 섹션 -->
+    <section id="customers" class="customers section">
+        <div class="container">
+            <h2 class="section-title">우리의 고객</h2>
+            <div class="customers-grid">
+                <div class="customer-card animate-on-scroll">
+                    <div class="customer-icon">🚀</div>
+                    <h3>스타트업</h3>
+                    <p>빠르게 성장하는 팀을 위한 유연한 사무실</p>
+                </div>
+                <div class="customer-card animate-on-scroll">
+                    <div class="customer-icon">🏪</div>
+                    <h3>소규모 기업</h3>
+                    <p>합리적인 비용으로 품질 좋은 오피스 공간</p>
+                </div>
+                <div class="customer-card animate-on-scroll">
+                    <div class="customer-icon">💼</div>
+                    <h3>프리랜서</h3>
+                    <p>전문적인 업무 환경이 필요한 1인 기업</p>
+                </div>
+                <div class="customer-card animate-on-scroll">
+                    <div class="customer-icon">🤝</div>
+                    <h3>중개사 파트너</h3>
+                    <p>효율적인 매물 관리와 고객 연결</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 수익 모델 섹션 -->
+    <section id="revenue" class="revenue section">
+        <div class="container">
+            <h2 class="section-title">수익 모델</h2>
+            <div class="revenue-grid">
+                <div class="revenue-card animate-on-scroll">
+                    <div class="revenue-icon">💵</div>
+                    <h3>중개 수수료</h3>
+                    <p>성사된 계약에 대한 정액 수수료 모델</p>
+                </div>
+                <div class="revenue-card animate-on-scroll">
+                    <div class="revenue-icon">⭐</div>
+                    <h3>프리미엄 노출</h3>
+                    <p>검색 상단 노출 및 추천 매물 광고 상품</p>
+                </div>
+                <div class="revenue-card animate-on-scroll">
+                    <div class="revenue-icon">📈</div>
+                    <h3>데이터 분석 리포트</h3>
+                    <p>시장 트렌드 및 임대 시세 분석 리포트 판매</p>
+                </div>
+                <div class="revenue-card animate-on-scroll">
+                    <div class="revenue-icon">⚙️</div>
+                    <h3>SaaS 구독</h3>
+                    <p>계약 워크플로우 및 관리 도구 제공</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 로드맵 섹션 -->
+    <section id="roadmap" class="roadmap section">
+        <div class="container">
+            <h2 class="section-title">제품 로드맵</h2>
+            <div class="roadmap-timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>1단계: MVP 출시</h3>
+                        <p>검색, 필터, 후기 기능을 포함한 최소 기능 제품 출시</p>
+                        <span class="timeline-period">3개월</span>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>2단계: 데이터 고도화</h3>
+                        <p>시세 분석 및 평가 알고리즘 적용, 스코어링 시스템 구축</p>
+                        <span class="timeline-period">6개월</span>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>3단계: 플랫폼 확장</h3>
+                        <p>계약 지원 시스템 및 SaaS 기능 확장</p>
+                        <span class="timeline-period">12개월</span>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>4단계: 글로벌 진출</h3>
+                        <p>주요 해외 도시로 서비스 확장</p>
+                        <span class="timeline-period">18개월+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기술 스택 섹션 -->
+    <section id="tech" class="tech section">
+        <div class="container">
+            <h2 class="section-title">기술 스택</h2>
+            <div class="tech-grid">
+                <div class="tech-card animate-on-scroll">
+                    <h3>📱 모바일</h3>
+                    <p>React Native</p>
+                    <span class="tech-desc">iOS/Android 크로스플랫폼</span>
+                </div>
+                <div class="tech-card animate-on-scroll">
+                    <h3>☁️ 클라우드</h3>
+                    <p>서버리스 아키텍처</p>
+                    <span class="tech-desc">확장 가능한 인프라</span>
+                </div>
+                <div class="tech-card animate-on-scroll">
+                    <h3>🗺️ 데이터</h3>
+                    <p>지도 & 공공데이터 연동</p>
+                    <span class="tech-desc">실시간 정보 통합</span>
+                </div>
+                <div class="tech-card animate-on-scroll">
+                    <h3>🤖 AI</h3>
+                    <p>리뷰 분석 & 시세 추정</p>
+                    <span class="tech-desc">머신러닝 기반 예측</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 리스크 및 대응 섹션 -->
+    <section id="risk" class="risk section">
+        <div class="container">
+            <h2 class="section-title">리스크 관리</h2>
+            <div class="risk-container">
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-left">
+                        <h3>⚠️ 허위정보 유입</h3>
+                        <p>부정확한 매물 정보나 리뷰 등록</p>
+                    </div>
+                    <div class="risk-right">
+                        <h3>✅ 대응 방안</h3>
+                        <p>리뷰 인증 절차 및 신고 시스템 운영</p>
+                    </div>
+                </div>
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-left">
+                        <h3>⚠️ 리뷰 악의적 사용</h3>
+                        <p>경쟁사 비방이나 허위 평가</p>
+                    </div>
+                    <div class="risk-right">
+                        <h3>✅ 대응 방안</h3>
+                        <p>AI 기반 이상 탐지 알고리즘 적용</p>
+                    </div>
+                </div>
+                <div class="risk-item animate-on-scroll">
+                    <div class="risk-left">
+                        <h3>⚠️ 법규 리스크</h3>
+                        <p>공인중개사법 등 관련 법규 준수</p>
+                    </div>
+                    <div class="risk-right">
+                        <h3>✅ 대응 방안</h3>
+                        <p>법률 자문 상시 운영 및 컴플라이언스 강화</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기대 효과 섹션 -->
+    <section id="impact" class="impact section">
+        <div class="container">
+            <h2 class="section-title">기대 효과</h2>
+            <div class="impact-grid">
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-number">01</div>
+                    <h3>임대 시장 투명성 증가</h3>
+                    <p>정보 비대칭 해소로 공정한 거래 환경 조성</p>
+                </div>
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-number">02</div>
+                    <h3>입주 만족도 상승</h3>
+                    <p>사전 정보 제공으로 계약 후 불만족 최소화</p>
+                </div>
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-number">03</div>
+                    <h3>데이터 기반 확장성</h3>
+                    <p>축적된 데이터로 다양한 부가 서비스 개발 가능</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 문의 섹션 -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">문의하기</h2>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <h3>오피스파인더와 함께하세요</h3>
+                    <p>투명한 사무실 임대 시장을 만들어갈 파트너를 찾습니다.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>contact@officefinder.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>02-1234-5678</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏢</span>
+                            <span>서울시 강남구 테헤란로</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form animate-on-scroll" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="이름" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="이메일" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="company" placeholder="회사명">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="문의 내용" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">문의 보내기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">오피스파인더</div>
+                <p class="footer-text">투명한 사무실 임대 플랫폼</p>
+                <p class="footer-copyright">&copy; 2025 OfficeFinder. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 맨 위로 버튼 -->
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
