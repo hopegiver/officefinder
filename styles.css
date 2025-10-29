@@ -172,6 +172,11 @@ body {
     position: relative;
     z-index: 10;
     text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-title {
@@ -179,6 +184,7 @@ body {
     font-weight: 800;
     margin-bottom: 1.5rem;
     animation: fadeInUp 1s ease;
+    width: 100%;
 }
 
 .hero-subtitle {
@@ -187,6 +193,8 @@ body {
     opacity: 0.95;
     animation: fadeInUp 1s ease 0.2s;
     animation-fill-mode: backwards;
+    width: 100%;
+    max-width: 800px;
 }
 
 .hero-buttons {
@@ -195,6 +203,7 @@ body {
     justify-content: center;
     animation: fadeInUp 1s ease 0.4s;
     animation-fill-mode: backwards;
+    width: 100%;
 }
 
 .btn {
