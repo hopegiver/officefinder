@@ -171,7 +171,16 @@ const translations = {
 
         // 푸터
         footer_text: "투명한 사무실 임대 플랫폼",
-        footer_copyright: "© 2025 OfficeFinder. All rights reserved."
+        footer_copyright: "© 2025 OfficeFinder. All rights reserved.",
+
+        // 지도
+        map_title: "사무실 위치 검색",
+        map_search_placeholder: "주소나 건물명을 검색하세요",
+        map_search_btn: "검색",
+        map_info: "지도를 클릭하거나 주소를 검색하여 사무실 위치를 확인하세요",
+        map_alert_empty: "검색할 주소를 입력해주세요",
+        map_alert_error: "주소 검색 중 오류가 발생했습니다",
+        map_alert_notfound: "검색 결과가 없습니다"
     },
 
     uz: {
@@ -345,7 +354,16 @@ const translations = {
 
         // Footer
         footer_text: "Shaffof ofis ijarasi platformasi",
-        footer_copyright: "© 2025 OfficeFinder. Barcha huquqlar himoyalangan."
+        footer_copyright: "© 2025 OfficeFinder. Barcha huquqlar himoyalangan.",
+
+        // Xarita
+        map_title: "Ofis joylashuvini qidirish",
+        map_search_placeholder: "Manzil yoki bino nomini kiriting",
+        map_search_btn: "Qidirish",
+        map_info: "Ofis joylashuvini tekshirish uchun xaritani bosing yoki manzilni qidiring",
+        map_alert_empty: "Qidiruv uchun manzilni kiriting",
+        map_alert_error: "Manzil qidirishda xatolik yuz berdi",
+        map_alert_notfound: "Qidiruv natijalari topilmadi"
     },
 
     ru: {
@@ -519,6 +537,15 @@ const translations = {
 
         // Подвал
         footer_text: "Прозрачная платформа аренды офисов",
-        footer_copyright: "© 2025 OfficeFinder. Все права защищены."
+        footer_copyright: "© 2025 OfficeFinder. Все права защищены.",
+
+        // Карта
+        map_title: "Поиск местоположения офиса",
+        map_search_placeholder: "Введите адрес или название здания",
+        map_search_btn: "Поиск",
+        map_info: "Нажмите на карту или введите адрес для поиска местоположения офиса",
+        map_alert_empty: "Пожалуйста, введите адрес для поиска",
+        map_alert_error: "Произошла ошибка при поиске адреса",
+        map_alert_notfound: "Результаты поиска не найдены"
     }
 };

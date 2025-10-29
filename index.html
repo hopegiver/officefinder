@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="page_title">오피스파인더 - 투명한 사무실 임대 플랫폼</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&submodules=geocoder"></script>
 </head>
 <body data-lang="ko">
     <!-- 네비게이션 -->
@@ -84,6 +85,17 @@
                     <h3 data-i18n="problem_5_title">중개 의존 비용 증가</h3>
                     <p data-i18n="problem_5_desc">정보 부족으로 중개사에 의존하며 추가 비용 발생</p>
                 </div>
+            </div>
+
+            <!-- 네이버 지도 섹션 -->
+            <div class="map-section animate-on-scroll">
+                <h3 class="map-title" data-i18n="map_title">사무실 위치 검색</h3>
+                <div class="map-search-container">
+                    <input type="text" id="mapSearch" class="map-search-input" data-i18n-placeholder="map_search_placeholder" placeholder="주소나 건물명을 검색하세요">
+                    <button class="map-search-btn" onclick="searchAddress()" data-i18n="map_search_btn">검색</button>
+                </div>
+                <div id="map" class="naver-map"></div>
+                <div class="map-info" data-i18n="map_info">지도를 클릭하거나 주소를 검색하여 사무실 위치를 확인하세요</div>
             </div>
         </div>
     </section>
@@ -474,6 +486,7 @@
 
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
+    <script src="map.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
