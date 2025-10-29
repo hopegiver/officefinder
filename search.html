@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="search_page_title">사무실 검색 - OfficeFinder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="search.css">
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&submodules=geocoder"></script>
+</head>
+<body data-lang="ko">
+    <!-- 네비게이션 -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">OfficeFinder</a></div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">홈</a></li>
+                    <li><a href="search.html" class="nav-link active" data-i18n="nav_search">검색</a></li>
+                    <li><a href="index.html#contact" class="nav-link" data-i18n="nav_contact">문의</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang-btn="ko">한국어</button>
+                    <button class="lang-btn" data-lang-btn="uz">O'zbek</button>
+                    <button class="lang-btn" data-lang-btn="ru">Русский</button>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 메인 컨테이너 -->
+    <div class="search-container">
+        <!-- 좌측 사이드바 -->
+        <aside class="sidebar">
+            <!-- 검색 필터 -->
+            <div class="filter-section">
+                <h2 class="filter-title" data-i18n="search_filter_title">검색 조건</h2>
+
+                <!-- 지역 검색 -->
+                <div class="filter-group">
+                    <label class="filter-label" data-i18n="search_label_location">지역</label>
+                    <input type="text" id="locationInput" class="filter-input" data-i18n-placeholder="search_placeholder_location" placeholder="예: 강남구, 서초구">
+                    <button class="filter-btn" onclick="searchByLocation()" data-i18n="search_btn_search">검색</button>
+                </div>
+
+                <!-- 면적 -->
+                <div class="filter-group">
+                    <label class="filter-label" data-i18n="search_label_area">면적 (평)</label>
+                    <div class="range-inputs">
+                        <input type="number" id="areaMin" class="filter-input-small" placeholder="최소" min="0">
+                        <span>~</span>
+                        <input type="number" id="areaMax" class="filter-input-small" placeholder="최대" min="0">
+                    </div>
+                </div>
+
+                <!-- 월 임대료 -->
+                <div class="filter-group">
+                    <label class="filter-label" data-i18n="search_label_rent">월 임대료 (만원)</label>
+                    <div class="range-inputs">
+                        <input type="number" id="rentMin" class="filter-input-small" placeholder="최소" min="0">
+                        <span>~</span>
+                        <input type="number" id="rentMax" class="filter-input-small" placeholder="최대" min="0">
+                    </div>
+                </div>
+
+                <!-- 보증금 -->
+                <div class="filter-group">
+                    <label class="filter-label" data-i18n="search_label_deposit">보증금 (만원)</label>
+                    <div class="range-inputs">
+                        <input type="number" id="depositMin" class="filter-input-small" placeholder="최소" min="0">
+                        <span>~</span>
+                        <input type="number" id="depositMax" class="filter-input-small" placeholder="최대" min="0">
+                    </div>
+                </div>
+
+                <!-- 건물 유형 -->
+                <div class="filter-group">
+                    <label class="filter-label" data-i18n="search_label_building_type">건물 유형</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="오피스텔" checked>
+                            <span data-i18n="search_type_officetel">오피스텔</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="일반사무실" checked>
+                            <span data-i18n="search_type_office">일반사무실</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="지식산업센터" checked>
+                            <span data-i18n="search_type_knowledge">지식산업센터</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="공유오피스" checked>
+                            <span data-i18n="search_type_shared">공유오피스</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 편의시설 -->
+                <div class="filter-group">
+                    <label class="filter-label" data-i18n="search_label_amenities">편의시설</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="주차장">
+                            <span data-i18n="search_amenity_parking">주차장</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="엘리베이터">
+                            <span data-i18n="search_amenity_elevator">엘리베이터</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="카페">
+                            <span data-i18n="search_amenity_cafe">카페</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="편의점">
+                            <span data-i18n="search_amenity_convenience">편의점</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 버튼 그룹 -->
+                <div class="filter-actions">
+                    <button class="btn-reset" onclick="resetFilters()" data-i18n="search_btn_reset">초기화</button>
+                    <button class="btn-apply" onclick="applyFilters()" data-i18n="search_btn_apply">적용</button>
+                </div>
+            </div>
+
+            <!-- 매물 리스트 -->
+            <div class="office-list" id="officeList">
+                <div class="list-header">
+                    <h3 data-i18n="search_list_title">매물 목록</h3>
+                    <span class="list-count" id="listCount">0개</span>
+                </div>
+                <div id="officeItems">
+                    <!-- 동적으로 생성될 매물 카드 -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- 우측 지도 -->
+        <main class="map-main">
+            <div id="searchMap" class="search-map"></div>
+
+            <!-- 지도 컨트롤 -->
+            <div class="map-controls">
+                <button class="map-control-btn" onclick="zoomIn()" title="확대">
+                    <span>+</span>
+                </button>
+                <button class="map-control-btn" onclick="zoomOut()" title="축소">
+                    <span>−</span>
+                </button>
+                <button class="map-control-btn" onclick="resetMapCenter()" title="현재 위치">
+                    <span>📍</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- 매물 상세 모달 -->
+    <div id="officeModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <!-- 동적으로 생성될 상세 정보 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="search-translations.js"></script>
+    <script src="i18n.js"></script>
+    <script src="search-map.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
